@@ -1,0 +1,70 @@
+{
+  "image": "examples/input/simple_score.png",
+  "clef": "treble",
+  "notes": [
+    {
+      "index": 1,
+      "x": 140,
+      "step": "F",
+      "octave": 4,
+      "pitch_name": "F4",
+      "measure": 1
+    },
+    {
+      "index": 2,
+      "x": 228,
+      "step": "A",
+      "octave": 4,
+      "pitch_name": "A4",
+      "measure": 1
+    },
+    {
+      "index": 3,
+      "x": 316,
+      "step": "C",
+      "octave": 5,
+      "pitch_name": "C5",
+      "measure": 1
+    },
+    {
+      "index": 4,
+      "x": 404,
+      "step": "E",
+      "octave": 5,
+      "pitch_name": "E5",
+      "measure": 1
+    },
+    {
+      "index": 5,
+      "x": 492,
+      "step": "G",
+      "octave": 4,
+      "pitch_name": "G4",
+      "measure": 2
+    },
+    {
+      "index": 6,
+      "x": 580,
+      "step": "B",
+      "octave": 4,
+      "pitch_name": "B4",
+      "measure": 2
+    },
+    {
+      "index": 7,
+      "x": 668,
+      "step": "D",
+      "octave": 5,
+      "pitch_name": "D5",
+      "measure": 2
+    },
+    {
+      "index": 8,
+      "x": 756,
+      "step": "F",
+      "octave": 5,
+      "pitch_name": "F5",
+      "measure": 2
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xunpu-graph-omr"
+version = "0.2.1"
+description = "Explainable optical music recognition with typed symbol graphs and music-aware reconstruction."
+readme = "README.md"
+authors = [{name = "Xudong Dai"}]
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "opencv-python-headless>=4.9",
+    "Pillow>=10",
+    "PyMuPDF>=1.24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "build>=1"]
+figures = ["matplotlib>=3.8"]
+gnn = [
+    "torch>=2.2",
+    "torch-geometric>=2.5",
+]
+detect = [
+    "torch>=2.2",
+    "torchvision>=0.17",
+]
+
+[project.scripts]
+xunpu-graph-omr = "xunpu_graph_omr.cli:main"
+
+[project.gui-scripts]
+xunpu-graph-omr-gui = "xunpu_graph_omr.gui:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

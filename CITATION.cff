@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software or research prototype, please cite it using these metadata."
+title: "Xunpu GraphOMR"
+type: software
+authors:
+  - family-names: "Dai"
+    given-names: "Xudong"
+version: 0.2.1
+date-released: 2026-10-04
+abstract: "An explainable optical music recognition research prototype using typed symbol graphs, musical consistency checks, and experimental heterogeneous graph learning modules."
+keywords:
+  - optical music recognition
+  - OMR
+  - graph neural network
+  - heterogeneous graph
+  - music information retrieval

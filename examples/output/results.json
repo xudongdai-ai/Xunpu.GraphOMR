@@ -1,0 +1,2229 @@
+{
+  "protocol": "synthetic-stress-v1",
+  "seed": 2026,
+  "scope": "Two procedural fixtures, eight variants each; not independent real-world scores.",
+  "metric": "Index-aligned matches / max(expected count, detected count, 1); macro average across cases.",
+  "export_check": "XML parse and positive note duration check, not MusicXML XSD validation.",
+  "engine": "xunpu / classical detector / rule-based graph inference",
+  "environment": {
+    "python": "3.13.5",
+    "opencv": "4.13.0",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41"
+  },
+  "summary": {
+    "cases": 16,
+    "exact_cases": 14,
+    "mean_pitch_accuracy": 0.96875,
+    "mean_duration_accuracy": 0.9427083333333334,
+    "parseable_exports": 16
+  },
+  "cases": [
+    {
+      "id": "melody-clean",
+      "variant": "clean",
+      "image": "melody-clean.png",
+      "expected": 8,
+      "error": null,
+      "actual": 8,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "melody-clean.overlay.png",
+      "xml": "melody-clean.musicxml",
+      "omr": "melody-clean.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.884
+        },
+        {
+          "pitch": "A4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.884
+        },
+        {
+          "pitch": "C5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.893
+        },
+        {
+          "pitch": "E5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.893
+        },
+        {
+          "pitch": "G4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.877
+        },
+        {
+          "pitch": "B4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.877
+        },
+        {
+          "pitch": "D5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.892
+        },
+        {
+          "pitch": "F5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.892
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_filled": 8,
+        "stem": 8
+      },
+      "edge_types": {
+        "inside_measure": 19,
+        "belongs_to_staff": 20,
+        "notehead_to_stem": 8,
+        "same_voice_next": 6
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 980x260 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=0.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0428"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=2.00, interline=16.00, beam=3.60"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=8"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=8, linked_notes=8"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=21"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=21, edges=53"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=8, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 33.88
+    },
+    {
+      "id": "melody-scale_075",
+      "variant": "scale_075",
+      "image": "melody-scale_075.png",
+      "expected": 8,
+      "error": null,
+      "actual": 8,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "melody-scale_075.overlay.png",
+      "xml": "melody-scale_075.musicxml",
+      "omr": "melody-scale_075.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.864
+        },
+        {
+          "pitch": "A4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.864
+        },
+        {
+          "pitch": "C5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.862
+        },
+        {
+          "pitch": "E5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.862
+        },
+        {
+          "pitch": "G4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.819
+        },
+        {
+          "pitch": "B4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.819
+        },
+        {
+          "pitch": "D5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.833
+        },
+        {
+          "pitch": "F5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.833
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_filled": 8,
+        "stem": 8
+      },
+      "edge_types": {
+        "inside_measure": 19,
+        "belongs_to_staff": 20,
+        "notehead_to_stem": 8,
+        "same_voice_next": 6
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 735x195 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=0.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0570"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=2.00, interline=12.00, beam=3.60"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=8"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=8, linked_notes=8"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=21"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=21, edges=53"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=8, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 40.12
+    },
+    {
+      "id": "melody-scale_150",
+      "variant": "scale_150",
+      "image": "melody-scale_150.png",
+      "expected": 8,
+      "error": null,
+      "actual": 8,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "melody-scale_150.overlay.png",
+      "xml": "melody-scale_150.musicxml",
+      "omr": "melody-scale_150.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.898
+        },
+        {
+          "pitch": "A4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.898
+        },
+        {
+          "pitch": "C5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.947
+        },
+        {
+          "pitch": "E5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.947
+        },
+        {
+          "pitch": "G4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.926
+        },
+        {
+          "pitch": "B4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.926
+        },
+        {
+          "pitch": "D5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.873
+        },
+        {
+          "pitch": "F5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.873
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_filled": 8,
+        "stem": 8
+      },
+      "edge_types": {
+        "inside_measure": 19,
+        "belongs_to_staff": 20,
+        "notehead_to_stem": 8,
+        "same_voice_next": 6
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 1470x390 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=0.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0437"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=3.00, interline=24.00, beam=5.40"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=8"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=8, linked_notes=8"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=21"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=21, edges=53"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=8, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 47.56
+    },
+    {
+      "id": "melody-rotate_minus2",
+      "variant": "rotate_minus2",
+      "image": "melody-rotate_minus2.png",
+      "expected": 8,
+      "error": null,
+      "actual": 8,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "melody-rotate_minus2.overlay.png",
+      "xml": "melody-rotate_minus2.musicxml",
+      "omr": "melody-rotate_minus2.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.888
+        },
+        {
+          "pitch": "A4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.894
+        },
+        {
+          "pitch": "C5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.899
+        },
+        {
+          "pitch": "E5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.901
+        },
+        {
+          "pitch": "G4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.875
+        },
+        {
+          "pitch": "B4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.894
+        },
+        {
+          "pitch": "D5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.904
+        },
+        {
+          "pitch": "F5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.905
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_filled": 8,
+        "stem": 8
+      },
+      "edge_types": {
+        "inside_measure": 19,
+        "belongs_to_staff": 20,
+        "notehead_to_stem": 8,
+        "same_voice_next": 6
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 980x260 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=2.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0442"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=2.00, interline=16.00, beam=3.60"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=8"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=8, linked_notes=8"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=21"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=21, edges=53"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=8, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 24.88
+    },
+    {
+      "id": "melody-rotate_plus2",
+      "variant": "rotate_plus2",
+      "image": "melody-rotate_plus2.png",
+      "expected": 8,
+      "error": null,
+      "actual": 8,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "melody-rotate_plus2.overlay.png",
+      "xml": "melody-rotate_plus2.musicxml",
+      "omr": "melody-rotate_plus2.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.932
+        },
+        {
+          "pitch": "A4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.9
+        },
+        {
+          "pitch": "C5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.894
+        },
+        {
+          "pitch": "E5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.903
+        },
+        {
+          "pitch": "G4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.898
+        },
+        {
+          "pitch": "B4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.895
+        },
+        {
+          "pitch": "D5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.902
+        },
+        {
+          "pitch": "F5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.896
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_filled": 8,
+        "stem": 8
+      },
+      "edge_types": {
+        "inside_measure": 19,
+        "belongs_to_staff": 20,
+        "notehead_to_stem": 8,
+        "same_voice_next": 6
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 980x260 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=-2.01deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0442"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=2.00, interline=16.00, beam=3.60"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=8"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=8, linked_notes=8"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=21"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=21, edges=53"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=8, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 23.42
+    },
+    {
+      "id": "melody-blur",
+      "variant": "blur",
+      "image": "melody-blur.png",
+      "expected": 8,
+      "error": null,
+      "actual": 8,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "melody-blur.overlay.png",
+      "xml": "melody-blur.musicxml",
+      "omr": "melody-blur.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.936
+        },
+        {
+          "pitch": "A4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.936
+        },
+        {
+          "pitch": "C5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.936
+        },
+        {
+          "pitch": "E5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.936
+        },
+        {
+          "pitch": "G4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.892
+        },
+        {
+          "pitch": "B4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.892
+        },
+        {
+          "pitch": "D5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.892
+        },
+        {
+          "pitch": "F5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.892
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_filled": 8,
+        "stem": 8
+      },
+      "edge_types": {
+        "inside_measure": 19,
+        "belongs_to_staff": 20,
+        "notehead_to_stem": 8,
+        "same_voice_next": 6
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 980x260 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=0.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0766"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=4.00, interline=16.00, beam=7.20"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=8"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=8, linked_notes=8"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=21"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=21, edges=53"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=8, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 30.38
+    },
+    {
+      "id": "melody-jpeg_45",
+      "variant": "jpeg_45",
+      "image": "melody-jpeg_45.png",
+      "expected": 8,
+      "error": null,
+      "actual": 8,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "melody-jpeg_45.overlay.png",
+      "xml": "melody-jpeg_45.musicxml",
+      "omr": "melody-jpeg_45.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.884
+        },
+        {
+          "pitch": "A4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.884
+        },
+        {
+          "pitch": "C5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.901
+        },
+        {
+          "pitch": "E5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.901
+        },
+        {
+          "pitch": "G4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.897
+        },
+        {
+          "pitch": "B4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.897
+        },
+        {
+          "pitch": "D5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.897
+        },
+        {
+          "pitch": "F5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.897
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_filled": 8,
+        "stem": 8
+      },
+      "edge_types": {
+        "inside_measure": 19,
+        "belongs_to_staff": 20,
+        "notehead_to_stem": 8,
+        "same_voice_next": 6
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 980x260 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=0.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0429"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=2.00, interline=16.00, beam=3.60"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=8"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=8, linked_notes=8"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=21"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=21, edges=53"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=8, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 20.96
+    },
+    {
+      "id": "melody-noise_12",
+      "variant": "noise_12",
+      "image": "melody-noise_12.png",
+      "expected": 8,
+      "error": null,
+      "actual": 8,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "melody-noise_12.overlay.png",
+      "xml": "melody-noise_12.musicxml",
+      "omr": "melody-noise_12.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.884
+        },
+        {
+          "pitch": "A4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.884
+        },
+        {
+          "pitch": "C5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.893
+        },
+        {
+          "pitch": "E5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 1,
+          "confidence": 0.893
+        },
+        {
+          "pitch": "G4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.877
+        },
+        {
+          "pitch": "B4",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.894
+        },
+        {
+          "pitch": "D5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.894
+        },
+        {
+          "pitch": "F5",
+          "type": "quarter",
+          "duration": 1,
+          "measure": 2,
+          "confidence": 0.892
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_filled": 8,
+        "stem": 8
+      },
+      "edge_types": {
+        "inside_measure": 19,
+        "belongs_to_staff": 20,
+        "notehead_to_stem": 8,
+        "same_voice_next": 6
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 980x260 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=0.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0429"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=2.00, interline=16.00, beam=3.60"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=8"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=8, linked_notes=8"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=21"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=21, edges=53"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=8, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 28.8
+    },
+    {
+      "id": "durations-clean",
+      "variant": "clean",
+      "image": "durations-clean.png",
+      "expected": 3,
+      "error": null,
+      "actual": 3,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "durations-clean.overlay.png",
+      "xml": "durations-clean.musicxml",
+      "omr": "durations-clean.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "whole",
+          "duration": 4,
+          "measure": 1,
+          "confidence": 0.329
+        },
+        {
+          "pitch": "A4",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.349
+        },
+        {
+          "pitch": "C5",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.387
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_empty": 3,
+        "stem": 2
+      },
+      "edge_types": {
+        "inside_measure": 8,
+        "belongs_to_staff": 9,
+        "notehead_to_stem": 2,
+        "same_voice_next": 1
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 760x240 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=0.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0375"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=2.00, interline=16.00, beam=3.60"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=3"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=2, linked_notes=2"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=10"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=10, edges=20"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=3, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 16.02
+    },
+    {
+      "id": "durations-scale_075",
+      "variant": "scale_075",
+      "image": "durations-scale_075.png",
+      "expected": 3,
+      "error": null,
+      "actual": 3,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 0.3333333333333333,
+      "exact": false,
+      "measure_legal_rate": 0.5,
+      "xml_parseable": true,
+      "overlay": "durations-scale_075.overlay.png",
+      "xml": "durations-scale_075.musicxml",
+      "omr": "durations-scale_075.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "whole",
+          "duration": 4,
+          "measure": 1,
+          "confidence": 0.38
+        },
+        {
+          "pitch": "A4",
+          "type": "whole",
+          "duration": 4,
+          "measure": 2,
+          "confidence": 0.47
+        },
+        {
+          "pitch": "C5",
+          "type": "whole",
+          "duration": 4,
+          "measure": 2,
+          "confidence": 0.494
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_empty": 3
+      },
+      "edge_types": {
+        "inside_measure": 6,
+        "belongs_to_staff": 7,
+        "same_voice_next": 1
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 570x180 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=0.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0502"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=2.00, interline=12.00, beam=3.60"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=3"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=0, linked_notes=0"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=1"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "warn",
+          "detail": "issues=1"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=8"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=8, edges=14"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=3, measures=2, issues=1"
+        }
+      ],
+      "elapsed_ms": 18.68
+    },
+    {
+      "id": "durations-scale_150",
+      "variant": "scale_150",
+      "image": "durations-scale_150.png",
+      "expected": 3,
+      "error": null,
+      "actual": 3,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "durations-scale_150.overlay.png",
+      "xml": "durations-scale_150.musicxml",
+      "omr": "durations-scale_150.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "whole",
+          "duration": 4,
+          "measure": 1,
+          "confidence": 0.417
+        },
+        {
+          "pitch": "A4",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.414
+        },
+        {
+          "pitch": "C5",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.412
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_empty": 3,
+        "stem": 2
+      },
+      "edge_types": {
+        "inside_measure": 8,
+        "belongs_to_staff": 9,
+        "notehead_to_stem": 2,
+        "same_voice_next": 1
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 1140x360 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=0.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0380"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=3.00, interline=24.00, beam=5.40"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=3"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=2, linked_notes=2"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=10"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=10, edges=20"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=3, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 30.75
+    },
+    {
+      "id": "durations-rotate_minus2",
+      "variant": "rotate_minus2",
+      "image": "durations-rotate_minus2.png",
+      "expected": 3,
+      "error": null,
+      "actual": 3,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "durations-rotate_minus2.overlay.png",
+      "xml": "durations-rotate_minus2.musicxml",
+      "omr": "durations-rotate_minus2.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "whole",
+          "duration": 4,
+          "measure": 1,
+          "confidence": 0.464
+        },
+        {
+          "pitch": "A4",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.413
+        },
+        {
+          "pitch": "C5",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.414
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_empty": 3,
+        "stem": 2
+      },
+      "edge_types": {
+        "inside_measure": 8,
+        "belongs_to_staff": 9,
+        "notehead_to_stem": 2,
+        "same_voice_next": 1
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 760x240 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=2.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0719"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=4.00, interline=16.00, beam=7.20"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=3"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=2, linked_notes=2"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=10"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=10, edges=20"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=3, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 17.85
+    },
+    {
+      "id": "durations-rotate_plus2",
+      "variant": "rotate_plus2",
+      "image": "durations-rotate_plus2.png",
+      "expected": 3,
+      "error": null,
+      "actual": 3,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "durations-rotate_plus2.overlay.png",
+      "xml": "durations-rotate_plus2.musicxml",
+      "omr": "durations-rotate_plus2.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "whole",
+          "duration": 4,
+          "measure": 1,
+          "confidence": 0.461
+        },
+        {
+          "pitch": "A4",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.407
+        },
+        {
+          "pitch": "C5",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.407
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_empty": 3,
+        "stem": 2
+      },
+      "edge_types": {
+        "inside_measure": 8,
+        "belongs_to_staff": 9,
+        "notehead_to_stem": 2,
+        "same_voice_next": 1
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 760x240 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=-2.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0719"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=4.00, interline=16.00, beam=7.20"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=3"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=2, linked_notes=2"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=10"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=10, edges=20"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=3, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 18.32
+    },
+    {
+      "id": "durations-blur",
+      "variant": "blur",
+      "image": "durations-blur.png",
+      "expected": 3,
+      "error": null,
+      "actual": 3,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "durations-blur.overlay.png",
+      "xml": "durations-blur.musicxml",
+      "omr": "durations-blur.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "whole",
+          "duration": 4,
+          "measure": 1,
+          "confidence": 0.467
+        },
+        {
+          "pitch": "A4",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.414
+        },
+        {
+          "pitch": "C5",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.414
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_empty": 3,
+        "stem": 2
+      },
+      "edge_types": {
+        "inside_measure": 8,
+        "belongs_to_staff": 9,
+        "notehead_to_stem": 2,
+        "same_voice_next": 1
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 760x240 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=0.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0719"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=4.00, interline=16.00, beam=7.20"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=3"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=2, linked_notes=2"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=10"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=10, edges=20"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=3, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 19.98
+    },
+    {
+      "id": "durations-jpeg_45",
+      "variant": "jpeg_45",
+      "image": "durations-jpeg_45.png",
+      "expected": 3,
+      "error": null,
+      "actual": 3,
+      "pitch_accuracy": 1.0,
+      "duration_accuracy": 1.0,
+      "exact": true,
+      "measure_legal_rate": 1.0,
+      "xml_parseable": true,
+      "overlay": "durations-jpeg_45.overlay.png",
+      "xml": "durations-jpeg_45.musicxml",
+      "omr": "durations-jpeg_45.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "whole",
+          "duration": 4,
+          "measure": 1,
+          "confidence": 0.352
+        },
+        {
+          "pitch": "A4",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.367
+        },
+        {
+          "pitch": "C5",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.404
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_empty": 3,
+        "stem": 2
+      },
+      "edge_types": {
+        "inside_measure": 8,
+        "belongs_to_staff": 9,
+        "notehead_to_stem": 2,
+        "same_voice_next": 1
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 760x240 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=0.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0375"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=2.00, interline=16.00, beam=3.60"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=3"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=2, linked_notes=2"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=2"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "ok",
+          "detail": "issues=0"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=10"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=10, edges=20"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=3, measures=2, issues=0"
+        }
+      ],
+      "elapsed_ms": 16.18
+    },
+    {
+      "id": "durations-noise_12",
+      "variant": "noise_12",
+      "image": "durations-noise_12.png",
+      "expected": 3,
+      "error": null,
+      "actual": 4,
+      "pitch_accuracy": 0.5,
+      "duration_accuracy": 0.75,
+      "exact": false,
+      "measure_legal_rate": 0.5,
+      "xml_parseable": true,
+      "overlay": "durations-noise_12.overlay.png",
+      "xml": "durations-noise_12.musicxml",
+      "omr": "durations-noise_12.omr.json",
+      "notes": [
+        {
+          "pitch": "F4",
+          "type": "whole",
+          "duration": 4,
+          "measure": 1,
+          "confidence": 0.358
+        },
+        {
+          "pitch": "A4",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.38
+        },
+        {
+          "pitch": "B4",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.374
+        },
+        {
+          "pitch": "C5",
+          "type": "half",
+          "duration": 2,
+          "measure": 2,
+          "confidence": 0.47
+        }
+      ],
+      "node_types": {
+        "staff": 1,
+        "barline": 2,
+        "measure": 2,
+        "notehead_empty": 4,
+        "stem": 2
+      },
+      "edge_types": {
+        "inside_measure": 9,
+        "belongs_to_staff": 10,
+        "notehead_to_stem": 3,
+        "same_chord": 1,
+        "same_voice_next": 1
+      },
+      "steps": [
+        {
+          "name": "LOAD",
+          "status": "ok",
+          "detail": "page=1, 760x240 grayscale image"
+        },
+        {
+          "name": "PREPROCESS",
+          "status": "ok",
+          "detail": "denoise=median3, deskew=0.00deg"
+        },
+        {
+          "name": "BINARY",
+          "status": "ok",
+          "detail": "foreground=0.0378"
+        },
+        {
+          "name": "SCALE",
+          "status": "ok",
+          "detail": "line=2.00, interline=16.00, beam=3.60"
+        },
+        {
+          "name": "GRID",
+          "status": "ok",
+          "detail": "staves=1"
+        },
+        {
+          "name": "HEADS",
+          "status": "ok",
+          "detail": "noteheads=4"
+        },
+        {
+          "name": "STEMS",
+          "status": "ok",
+          "detail": "stems=2, linked_notes=3"
+        },
+        {
+          "name": "MEASURES",
+          "status": "ok",
+          "detail": "measures=2, complete=1"
+        },
+        {
+          "name": "RHYTHMS",
+          "status": "warn",
+          "detail": "issues=1"
+        },
+        {
+          "name": "DETECT",
+          "status": "ok",
+          "detail": "engine=classical-opencv, symbols=11"
+        },
+        {
+          "name": "GRAPH",
+          "status": "ok",
+          "detail": "nodes=11, edges=24"
+        },
+        {
+          "name": "GNN",
+          "status": "ok",
+          "detail": "engine=rule-based-heterograph, notes=0"
+        },
+        {
+          "name": "DECODE",
+          "status": "ok",
+          "detail": "notes=4, measures=2, issues=1"
+        }
+      ],
+      "elapsed_ms": 20.64
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "image": "examples/input/duration_score.png",
+  "clef": "treble",
+  "notes": [
+    {
+      "index": 1,
+      "x": 210,
+      "step": "F",
+      "octave": 4,
+      "pitch_name": "F4",
+      "note_type": "whole",
+      "duration": 4,
+      "measure": 1
+    },
+    {
+      "index": 2,
+      "x": 450,
+      "step": "A",
+      "octave": 4,
+      "pitch_name": "A4",
+      "note_type": "half",
+      "duration": 2,
+      "measure": 2
+    },
+    {
+      "index": 3,
+      "x": 570,
+      "step": "C",
+      "octave": 5,
+      "pitch_name": "C5",
+      "note_type": "half",
+      "duration": 2,
+      "measure": 2
+    }
+  ]
+}
